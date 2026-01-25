@@ -6,6 +6,23 @@
   box-sizing: border-box;
 }
 
+.site-header h1 {
+  font-size: 75px; /* Set the size in pixels */
+  font-weight: bold;
+  margin-top: 10px; /* Top margin in pixels */
+  margin-bottom: 5px; /* Bottom margin in pixels */
+  margin-left: 0px; /* Left margin in pixels */
+  margin-right: 0px; /* Right margin in pixels */
+}
+
+h2 {
+  font-size: 36px; /* Set the size in pixels */
+  font-weight: bold; /* Make the text bold */
+  margin-top: 10px; /* Add space above the h2 */
+  margin-bottom: 5px; /* Add space below the h2 */
+  color: #fff; /* Set the text color */
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
@@ -21,15 +38,10 @@ body {
   padding: 3rem 0;
 }
 
-.site-header h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
 
 .site-header p {
   font-size: 1.1rem;
-  color: #555;
+  color: #ffffff;
 }
 
 /* ITEMS SECTION */
@@ -82,4 +94,47 @@ body {
   border-top: 1px solid #ccc;
   font-size: 0.9rem;
   color: #666;
+}
+
+/* Default (Light Mode) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}/* Import Custom Font */
+@font-face {
+  font-family: 'Dirty English'; /* Name of the font */
+  src: url('./fonts/dirty-english.ttf') format('truetype'); /* Path to the font file */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Light Mode */
+body:not(.dark-mode) .site-header h2 {
+  color: #000000; /* Black for light mode */
+}
+
+/* Apply the Custom Font */
+body {
+  font-family: 'Dirty English', Arial, sans-serif; /* Fallback to Arial if the font fails to load */
+}
+.site-header h1 {
+  font-family: 'Dirty English', sans-serif;
+}
+@font-face {
+  font-family: 'CustomFont';
+  src: url('./fonts/dirty-english.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('./fonts/dirty-english.ttf') format('truetype');
+  font-weight: bold;
 }
