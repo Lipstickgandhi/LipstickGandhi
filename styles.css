@@ -110,7 +110,7 @@ body.dark-mode {
 }/* Import Custom Font */
 @font-face {
   font-family: 'Dirty English'; /* Name of the font */
-  src: url('./fonts/dirty-english.ttf') format('truetype'); /* Path to the font file */
+  src: url('./Fonts/dirty-english.ttf') format('truetype'); /* Path to the font file */
   font-weight: normal;
   font-style: normal;
 }
@@ -129,12 +129,12 @@ body {
 }
 @font-face {
   font-family: 'CustomFont';
-  src: url('./fonts/dirty-english.ttf') format('truetype');
+  src: url('./Fonts/dirty-english.ttf') format('truetype');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'CustomFont';
-  src: url('./fonts/dirty-english.ttf') format('truetype');
+  src: url('./Fonts/dirty-english.ttf') format('truetype');
   font-weight: bold;
 }
