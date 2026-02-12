@@ -1,5 +1,13 @@
 /* GLOBAL STYLES */
 
+/* Import Custom Font */
+@font-face {
+  font-family: 'Dirty English'; /* Name of the font */
+  src: url('./fonts/dirty-english.ttf') format('truetype'); /* Path to the font file */
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -107,12 +115,6 @@ body {
 body.dark-mode {
   background-color: #000000;
   color: #ffffff;
-}/* Import Custom Font */
-@font-face {
-  font-family: 'Dirty English'; /* Name of the font */
-  src: url('./fonts/dirty-english.ttf') format('truetype'); /* Path to the font file */
-  font-weight: normal;
-  font-style: normal;
 }
 
 /* Light Mode */
@@ -126,15 +128,4 @@ body {
 }
 .site-header h1 {
   font-family: 'Dirty English', sans-serif;
-}
-@font-face {
-  font-family: 'CustomFont';
-  src: url('./fonts/dirty-english.ttf') format('truetype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'CustomFont';
-  src: url('./fonts/dirty-english.ttf') format('truetype');
-  font-weight: bold;
 }
