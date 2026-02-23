@@ -1,10 +1,8 @@
-// filepath: /Users/heather/Desktop/Lipstick Gandhi/script.js
-console.log("Lipstick Gandhi website is ready!");
-// Select the toggle button
-const themeToggle = document.getElementById('theme-toggle');
+// Select the theme toggle button
+const themeToggleBtn = document.getElementById('theme-toggle');
 
-// Add a click event listener to the button
-themeToggle.addEventListener('click', () => {
+// Add a click event listener to toggle dark mode
+themeToggleBtn.addEventListener('click', () => {
   // Toggle the 'dark-mode' class on the body
   document.body.classList.toggle('dark-mode');
 
@@ -16,7 +14,12 @@ themeToggle.addEventListener('click', () => {
 // Load the saved theme on page load
 window.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
+  const isDarkMode = savedTheme === 'dark';
+
+  // Apply the saved theme
+  if (isDarkMode) {
     document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
   }
 });
