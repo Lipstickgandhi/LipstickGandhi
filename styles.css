@@ -115,8 +115,14 @@ body {
   padding: 2rem 2rem 2.5rem;
   margin: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.content-panel h1,
+.content-panel h2 {
+  margin: 0;
 }
 
 .coming-soon {
@@ -129,6 +135,9 @@ body {
 
 .site-title {
   display: block;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
   font-family: 'Wuestling', sans-serif;
 }
 
