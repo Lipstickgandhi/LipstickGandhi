@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Wuestling';
+  src: url('./Fonts/Wuestling.woff2') format('woff2'),
+       url('./Fonts/Wuestling.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* =============================================
    GLOBAL RESET & BASE
    ============================================= */
@@ -120,7 +128,8 @@ body {
 }
 
 .site-title {
-  display: none;
+  display: block;
+  font-family: 'Wuestling', sans-serif;
 }
 
 /* =============================================
