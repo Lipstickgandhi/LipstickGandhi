@@ -125,7 +125,7 @@ body {
 }
 
 .coming-soon {
-  font-size: 40px;
+  font-size: clamp(28px, 7vw, 40px);
   color: #111;
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
@@ -134,10 +134,12 @@ body {
 
 .site-title {
   display: block;
-  font-size: 40px;
+  max-width: 100%;
+  font-size: clamp(28px, 7vw, 40px);
   font-weight: normal;
   text-align: center;
   font-family: 'Wuestling', sans-serif;
+  overflow-wrap: break-word;
 }
 
 /* =============================================
@@ -207,7 +209,7 @@ body {
     width: 100%;
     min-height: 100vh;
     border: none;
-    padding: 0;
+    padding: 0 1rem;
     margin-left: 0;
     background: #fff;
   }
