@@ -99,7 +99,6 @@ body {
   justify-content: center;
 }
 
-.content-panel h1,
 .content-panel h2 {
   margin: 0;
 }
@@ -112,12 +111,15 @@ body {
   font-weight: normal;
 }
 
-.site-title {
+.header-image {
   display: block;
-  font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: normal;
-  text-align: center;
-  font-family: 'Wuestling', sans-serif;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 1.5rem;
+}
+
+.header-image[hidden] {
+  display: none;
 }
 
 /* =============================================
@@ -186,7 +188,7 @@ body {
     width: 100%;
     min-height: 100vh;
     border: none;
-    padding: 0;
+    padding: 0 1rem;
     margin-left: 0;
     background: #fff;
   }
