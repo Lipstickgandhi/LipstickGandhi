@@ -21,7 +21,7 @@ html, body {
 body {
   font-family: 'Courier New', Courier, monospace;
   line-height: 1.6;
-  background: #000;
+  background: #fff;
   color: #111;
   min-height: 100vh;
 }
@@ -39,10 +39,9 @@ body {
    SIDEBAR
    ============================================= */
 .sidebar {
-  width: 280px;
+  width: 200px;
   flex-shrink: 0;
   background: #fff;
-  border-right: 3px solid #000;
   padding: 1.5rem 0;
   display: flex;
   flex-direction: column;
@@ -51,13 +50,6 @@ body {
   min-height: 100vh;
   height: 100vh;
   overflow-y: auto;
-}
-
-.sidebar-image {
-  width: min(calc(100% - 2.5rem), 200px);
-  max-height: 280px;
-  object-fit: contain;
-  margin: 1rem auto 2rem;
 }
 
 .nav-standalone-wrap {
@@ -69,7 +61,7 @@ body {
   display: block;
   width: 100px;
   height: 1px;
-  background-color: #777;
+  background-color: #d3d3d3;
   margin-left: 1.25rem;
   margin-top: 0.5rem;
 }
@@ -91,7 +83,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000;
+  background: #fff;
 }
 
 .content-panel {
@@ -177,7 +169,6 @@ body {
     transform: translateX(-100%);
     transition: transform 0.25s ease;
     border-right: none;
-    border-bottom: 3px solid #000;
   }
 
   .sidebar.open {
