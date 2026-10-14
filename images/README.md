@@ -1,4 +1,4 @@
 # Header image
 
-Add the final header image as `images/header.png`. It is displayed at the top of the page by `index.html`.
-Until the file exists, the image is hidden automatically.
+The header image is currently loaded from a GitHub attachment URL in `index.html`.
+To self-host it, save the file as `images/header.png` and change the `<img src>` in `index.html` to `images/header.png`.
