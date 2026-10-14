@@ -5,9 +5,6 @@
   font-style: normal;
 }
 
-/* =============================================
-   GLOBAL RESET & BASE
-   ============================================= */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -16,33 +13,31 @@
 
 html, body {
   min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Courier New', Courier, monospace;
   line-height: 1.6;
-  background: #fff;
-  color: #111;
+  background: #1D1B1F;
+  color: #fff;
   min-height: 100vh;
 }
 
-/* =============================================
-   LAYOUT: sidebar + main side by side
-   ============================================= */
 .layout {
   display: flex;
   min-height: 100vh;
+  width: 100%;
   align-items: stretch;
+  background: #1D1B1F;
 }
 
-/* =============================================
-   SIDEBAR
-   ============================================= */
 .sidebar {
-  width: 200px;
+  width: 130px;
   flex-shrink: 0;
-  background: #fff;
-  padding: 1.5rem 0;
+  background: #1D1B1F;
+  padding: 1.5rem 0 0;
   display: flex;
   flex-direction: column;
   position: sticky;
@@ -50,127 +45,118 @@ body {
   min-height: 100vh;
   height: 100vh;
   overflow-y: auto;
+  border-right: none;
+}
+
+.coming-soon {
+  font-family: 'Wuestling', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.05;
+  font-weight: normal;
+  color: #fff;
+  padding: 0 0.75rem;
+  margin: 0 0 1.25rem;
+  text-align: left;
 }
 
 .nav-standalone-wrap {
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
 }
 
 .nav-standalone-wrap::after {
   content: '';
   display: block;
-  width: 100px;
+  width: 62px;
   height: 1px;
-  background-color: #d3d3d3;
-  margin-left: 1.25rem;
-  margin-top: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.38);
+  margin-left: 0.9rem;
+  margin-top: 0.45rem;
 }
 
 .nav-standalone {
   display: block;
-  padding: 0.75rem 1.25rem;
+  padding: 0.5rem 0.9rem;
   text-decoration: none;
-  font-size: 0.95rem;
-  color: #111;
+  font-size: 0.9rem;
+  color: #fff;
 }
 
-/* =============================================
-   MAIN CONTENT
-   ============================================= */
 .main-content {
   flex: 1;
+  min-width: 0;
+  height: 100vh;
+  margin: 0;
   padding: 0;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  background: #fff;
-}
-
-.content-panel {
-  width: min(100%, 960px);
-  height: fit-content;
-  max-height: calc(100vh - 2rem);
-  background: #fff;
-  padding: 2rem 2rem 2.5rem;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.content-panel h2 {
-  margin: 0;
-}
-
-.coming-soon {
-  font-size: 40px;
-  color: #111;
-  font-family: 'Wuestling', sans-serif;
-  text-align: center;
-  font-weight: normal;
+  background: #1D1B1F;
+  overflow: hidden;
 }
 
 .header-image {
   display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto 1.5rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin: 0;
+  background: #1D1B1F;
+  border: none;
 }
 
 .header-image[hidden] {
   display: none;
 }
 
-/* =============================================
-   MOBILE SIDEBAR TOGGLE BUTTON
-   ============================================= */
 .sidebar-toggle-btn {
   display: none;
   position: fixed;
   top: 0.75rem;
   right: 0.75rem;
-  left: auto;
   z-index: 200;
-  background: #fff;
-  border: 2px solid #000;
+  background: transparent;
+  border: none;
   border-radius: 0;
-  font-size: 1.3rem;
-  width: 52px;
-  height: 52px;
+  color: #000;
+  font-size: 1.75rem;
+  width: 48px;
+  height: 48px;
   cursor: pointer;
   line-height: 1;
+  box-shadow: none;
 }
 
-/* =============================================
-   RESPONSIVE: mobile
-   ============================================= */
 @media (max-width: 700px) {
   body {
-    background: #fff;
+    background: #1D1B1F;
   }
 
   .sidebar-toggle-btn {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: transparent;
+    border: none;
+    color: #000;
   }
 
   .layout {
-    flex-direction: column;
-    background: #fff;
+    display: block;
+    height: auto;
+    width: 100%;
   }
 
   .sidebar {
     position: fixed;
     top: 0;
     left: 0;
+    width: min(280px, 72vw);
     height: 100vh;
-    width: 100%;
     z-index: 100;
+    padding-top: 4rem;
     transform: translateX(-100%);
     transition: transform 0.25s ease;
-    border-right: none;
   }
 
   .sidebar.open {
@@ -178,18 +164,8 @@ body {
   }
 
   .main-content {
-    padding: 0;
-    background: #fff;
-    min-height: 100vh;
-    width: 100%;
-  }
-
-  .content-panel {
     width: 100%;
     min-height: 100vh;
-    border: none;
-    padding: 0 1rem;
-    margin-left: 0;
-    background: #fff;
+    height: 100vh;
   }
 }
