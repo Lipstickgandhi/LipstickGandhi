@@ -127,14 +127,14 @@ body {
 .coming-soon {
   font-size: 40px;
   color: #111;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Wuestling', sans-serif;
   text-align: center;
   font-weight: normal;
 }
 
 .site-title {
   display: block;
-  font-size: 40px;
+  font-size: clamp(3rem, 8vw, 6rem);
   font-weight: normal;
   text-align: center;
   font-family: 'Wuestling', sans-serif;
