@@ -39,7 +39,7 @@ body {
    SIDEBAR
    ============================================= */
 .sidebar {
-  width: 380px;
+  width: 280px;
   flex-shrink: 0;
   background: #fff;
   border-right: 3px solid #000;
@@ -53,22 +53,11 @@ body {
   overflow-y: auto;
 }
 
-.sidebar-logo-placeholder {
-  margin: 1rem 1.25rem 2rem;
-  height: 140px;
-  border: 2px solid #000;
-  border-radius: 0;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.sidebar-logo-placeholder img {
-  width: 100%;
-  height: 100%;
+.sidebar-image {
+  width: min(calc(100% - 2.5rem), 200px);
+  max-height: 280px;
   object-fit: contain;
+  margin: 1rem auto 2rem;
 }
 
 .nav-standalone-wrap {
@@ -110,7 +99,6 @@ body {
   height: fit-content;
   max-height: calc(100vh - 2rem);
   background: #fff;
-  border: 3px solid #000;
   padding: 2rem 2rem 2.5rem;
   margin: auto;
   display: flex;
