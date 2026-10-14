@@ -163,6 +163,10 @@ body {
     transform: translateX(0);
   }
 
+  .header-image {
+    object-position: 75% center;
+  }
+
   .main-content {
     width: 100%;
     min-height: 100vh;
