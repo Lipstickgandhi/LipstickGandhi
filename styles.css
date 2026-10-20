@@ -71,7 +71,7 @@ body {
 
 a.rail-item:hover,
 a.rail-item:focus-visible {
-  opacity: 0.6;
+  color: #9C1917;
 }
 
 .main-content {
