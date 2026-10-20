@@ -118,6 +118,6 @@ a.rail-item:focus-visible {
   }
 
   .header-image {
-    object-position: 75% center;
+    object-position: 60% 100%;
   }
 }
