@@ -5,10 +5,22 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Bayon';
+  src: url('./Fonts/Bayon-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: 'Bayon', sans-serif;
+  font-weight: normal;
 }
 
 html, body {
