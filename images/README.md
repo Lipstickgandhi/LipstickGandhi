@@ -1,4 +1,3 @@
 # Header image
 
-The header image is currently loaded from a GitHub attachment URL in `index.html`.
-To self-host it, save the file as `images/header.png` and change the `<img src>` in `index.html` to `images/header.png`.
+The header image is stored locally at `images/shadow-header.jpg` and referenced from `index.html`.
