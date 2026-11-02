@@ -51,7 +51,7 @@ body {
 .sidebar {
   width: 88px;
   flex-shrink: 0;
-  background: #1D1B1F;
+  background: #1A001A;
   position: sticky;
   top: 0;
   height: 100vh;
@@ -59,7 +59,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 2rem;
   padding: 1.5rem 0;
   overflow: hidden;
