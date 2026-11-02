@@ -78,14 +78,18 @@ body {
 }
 
 .coming-soon {
-  font-family: 'Wuestling', sans-serif;
   font-size: 2.6rem;
   letter-spacing: 0.04em;
   text-transform: none;
 }
 
-a.rail-item:hover,
-a.rail-item:focus-visible {
+.rail-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.rail-item a:hover,
+.rail-item a:focus-visible {
   color: #9C1917;
 }
 
