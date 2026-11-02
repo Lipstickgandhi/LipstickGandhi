@@ -78,6 +78,7 @@ body {
 }
 
 .coming-soon {
+  color: #BE1E26;
   font-size: 2.6rem;
   letter-spacing: 0.04em;
   text-transform: none;
@@ -90,7 +91,7 @@ body {
 
 .rail-item a:hover,
 .rail-item a:focus-visible {
-  color: #9C1917;
+  color: #BE1E26;
 }
 
 .main-content {
