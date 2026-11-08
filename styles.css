@@ -68,7 +68,7 @@ body {
 .rail-item {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 1.5rem;
+  font-size: 2rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
@@ -78,7 +78,7 @@ body {
 }
 
 .coming-soon {
-  font-size: 2.6rem;
+  font-size: 3.5rem;
   letter-spacing: 0.04em;
   text-transform: none;
   color: #32142D;
@@ -131,11 +131,11 @@ body {
   }
 
   .rail-item {
-    font-size: 1.15rem;
+    font-size: 1.5rem;
   }
 
   .coming-soon {
-    font-size: 2rem;
+    font-size: 2.6rem;
   }
 
   .header-image {
