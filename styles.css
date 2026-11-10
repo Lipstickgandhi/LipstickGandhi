@@ -44,7 +44,7 @@ body {
 .sidebar {
   width: 88px;
   flex-shrink: 0;
-  background: #B7AFBA;
+  background: #010101;
   position: sticky;
   top: 0;
   height: 100vh;
@@ -52,7 +52,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 2rem;
   padding: 1.5rem 0;
   overflow: hidden;
@@ -74,23 +74,23 @@ body {
   font-size: 3.5rem;
   letter-spacing: 0.04em;
   text-transform: none;
-  color: #32142D;
+  color: #B7AFBA;
 }
 
 .rail-item a {
-  color: #32142D;
+  color: #B7AFBA;
   text-decoration: none;
 }
 
 .rail-item.inquiries {
-  font-size: 0.7rem;
+  font-size: 30px;
   letter-spacing: 0.04em;
   text-transform: none;
 }
 
 .rail-item a:hover,
 .rail-item a:focus-visible {
-  color: #9C1917;
+  color: #E1A3A1;
 }
 
 .main-content {
@@ -135,6 +135,10 @@ body {
 
   .coming-soon {
     font-size: 2.6rem;
+  }
+
+  .rail-item.inquiries {
+    font-size: 26px;
   }
 
   .header-image {
