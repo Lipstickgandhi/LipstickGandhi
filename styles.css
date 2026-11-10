@@ -5,13 +5,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Bayon';
-  src: url('./Fonts/Bayon-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -19,7 +12,7 @@
 }
 
 h1, h2 {
-  font-family: 'Bayon', sans-serif;
+  font-family: 'Babylonica', cursive;
   font-weight: normal;
 }
 
@@ -30,7 +23,7 @@ html, body {
 }
 
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Babylonica', cursive;
   font-size: 1.25rem;
   line-height: 1.7;
   background: #1D1B1F;
@@ -51,7 +44,7 @@ body {
 .sidebar {
   width: 88px;
   flex-shrink: 0;
-  background: #1A001A;
+  background: #B7AFBA;
   position: sticky;
   top: 0;
   height: 100vh;
@@ -85,8 +78,14 @@ body {
 }
 
 .rail-item a {
-  color: #B7B0B9;
+  color: #32142D;
   text-decoration: none;
+}
+
+.rail-item.inquiries {
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: none;
 }
 
 .rail-item a:hover,
