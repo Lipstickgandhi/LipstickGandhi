@@ -1,50 +1,184 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lipstick Gandhi — Blog</title>
-  <meta name="description" content="Notes and updates from Lipstick Gandhi.">
-  <link rel="icon" href="https://github.com/user-attachments/assets/bb887e30-1a02-4804-bfd5-9c662e2b9721">
-  <link rel="stylesheet" href="blog.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name Blog</title>
+  <meta name="description" content="A running scrapbook of art, clothes, music, downloads and things we like.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="layout">
-    <nav class="sidebar" aria-label="Site navigation">
-      <a class="rail-item wordmark" href="index.html">Lipstick Gandhi</a>
-      <a class="rail-item current-page" href="#blog" aria-current="page">Blog</a>
-      <a class="rail-item inquiries" href="mailto:info@lipstickgandhi.com">Inquiries</a>
-    </nav>
+<div class="column">
 
-    <div class="page">
-      <header class="site-header">
-        <span class="eyebrow">Lipstick Gandhi / Blog</span>
-      </header>
+  <!-- ===================== HEADER ===================== -->
+  <header class="masthead">
+    <div class="name"><a href="./">Your Name</a></div>
+    <p class="tagline">A Running Scrapbook of Art, Clothes, Music and Odd Finds</p>
+    <a class="small" href="#posts">Browse and Enjoy</a>
+  </header>
 
-      <main>
-        <section class="blog" id="blog" aria-labelledby="blog-title">
-          <div class="image-frame">
-            <img
-              src="images/shadow-header.jpg"
-              alt="A soft-focus silhouette of two people in dark clothing"
-              class="header-image"
-            >
-          </div>
+  <!-- ===================== INTRO ===================== -->
+  <main>
+  <div class="intro">
+    <h1>Your Name: A Running Scrapbook of Art, Clothes, Music and Odd Finds!</h1>
 
-          <div class="blog-card">
-            <p class="eyebrow">Notes &amp; updates</p>
-            <h1 id="blog-title">Coming soon.</h1>
-            <p class="note">Notes and updates are on their way.</p>
-            <a class="contact-link" href="mailto:info@lipstickgandhi.com">For inquiries, get in touch <span aria-hidden="true">↗</span></a>
-          </div>
-        </section>
-      </main>
+    <p>Thanks for stopping by. This page collects things we like (and a few we don't): art, clothes,
+      music, downloads and odds and ends. Some of it we made, some we found online, and some was sent
+      in by friends.</p>
 
-      <footer class="site-footer">
-        <span>© Lipstick Gandhi</span>
-        <a href="mailto:info@lipstickgandhi.com">info@lipstickgandhi.com</a>
-      </footer>
-    </div>
+    <h2>Looking for something specific?</h2>
+
+    <p>Most things listed here are for sale or trade. To ask about anything, just
+      <span class="loud"><a href="mailto:you@example.com?subject=Hello">email us here</a></span>.</p>
+
+    <p>Go ahead and <span class="loud">BROWSE, SCROLL, DOWNLOAD and ADMIRE!</span></p>
+
+    <p class="loud">****Everything on this page was put together by Your Name.</p>
+
+    <h2>Welcome to the page...</h2>
+
+    <p>We also take on creative work for people in art and fashion.
+      Here are some things you can ask about by <a href="mailto:you@example.com?subject=Services"><b>email</b></a>:</p>
+
+    <ul>
+      <li>Creative direction</li>
+      <li>Styling and personal shopping</li>
+      <li>Art advice (finding and buying work)</li>
+      <li>Event planning and hosting</li>
+      <li>Graphic design</li>
+      <li>Website design</li>
+      <li>Item sourcing</li>
+    </ul>
+
+    <p style="margin-top:15px">Other questions? <a href="mailto:you@example.com?subject=Question"><b>Email here</b></a>.</p>
+
+    <p class="sign-off">Enjoy scrolling and browsing!!!</p>
   </div>
+
+  <img class="hero" src="images/hero.svg" width="440" height="300" alt="Placeholder banner image">
+
+  <hr class="divider">
+
+  <!-- ===================== POSTS =====================
+       Newest at the top. To add a post, copy one of the blocks
+       below (everything from <section ...> to </section>),
+       paste it right under this comment, and change the text,
+       the number and the image file names.
+
+       Three kinds of post:
+         class="post"             plain: image on the left, details on the right
+         class="post boxed"       shaded box pushed to the right, with small thumbnails
+         class="post boxed tuck"  same, but slid up beside the post above it
+  -->
+  <div id="posts">
+
+    <!-- Post 0006: a download -->
+    <section class="post" id="no-0006">
+      <p class="post-head">
+        <strong class="tag">Your Name</strong>: Free Activity Book, puzzles and word games 14/01/2025 No. 0006
+        <a href="files/activity-book.txt" download>[Download]</a>
+      </p>
+      <div class="post-body">
+        <img src="images/booklet.svg" width="180" height="230" alt="Placeholder booklet cover">
+        <div class="post-meta">
+          <p class="file">File: <a href="files/activity-book.txt" download>[activity-book.txt]</a></p>
+          <p>A free activity book. Word puzzles, logic games, brain benders and more.<br>
+            Click to download or print!<br>**Answers included**</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Post 0005: Likes & Hates board -->
+    <section class="post" id="no-0005">
+      <p class="post-head">
+        <strong class="tag">Your Name</strong>: Likes &amp; Hates, sent in by friends 05/01/2025 No. 0005
+      </p>
+      <table class="board">
+        <tr><th></th><th>Date</th><th>Who</th><th>Said</th></tr>
+        <tr>
+          <td><input type="checkbox" aria-label="Mark this row"></td>
+          <td>Jan 05, 2025<br>4:27 PM</td>
+          <td><img src="images/avatar-1.svg" width="48" height="48" alt="">friend_one</td>
+          <td><b>Like:</b> <a href="https://example.com/">https://example.com/a-link-they-sent</a><br><br>
+              <b>Hate:</b> N/A</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" aria-label="Mark this row"></td>
+          <td>Jan 05, 2025<br>11:39 AM</td>
+          <td><img src="images/avatar-2.svg" width="48" height="48" alt="">friend_two</td>
+          <td><b>Like:</b> <a href="https://example.com/">https://example.com/something-good</a><br><br>
+              <b>Hate:</b> <a href="https://example.com/">https://example.com/something-bad</a></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" aria-label="Mark this row"></td>
+          <td>Jan 04, 2025<br>8:42 PM</td>
+          <td>friend_three</td>
+          <td><b>Like:</b> <a href="https://example.com/">https://example.com/a-song</a><br><br>
+              <b>Hate:</b> Parsley</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Post 0004: boxed, not tucked -->
+    <section class="post boxed" id="no-0004">
+      <p class="post-head">
+        <strong class="tag">Your Name</strong>: Exhibition poster, signed 20/12/2024 No. 0004
+        <a href="images/poster.svg">[View]</a><a href="mailto:you@example.com?subject=Inquiry%20about%20No.%200004">[Inquire]</a>
+      </p>
+      <img src="images/poster.svg" width="320" height="240" alt="Placeholder poster">
+    </section>
+
+    <!-- Post 0003: plain, with a longer description -->
+    <section class="post" id="no-0003">
+      <p class="post-head">
+        <strong class="tag">Your Name</strong>: Vintage leather jacket, size M 12/12/2024 No. 0003
+        <a href="images/jacket.svg">[View]</a><a href="mailto:you@example.com?subject=Inquiry%20about%20No.%200003">[Inquire]</a>
+      </p>
+      <div class="post-body">
+        <img src="images/jacket.svg" width="180" height="180" alt="Placeholder jacket photo">
+        <div class="post-meta">
+          <p class="file">File: <a href="images/jacket.svg">[jacket_front.jpg]</a></p>
+          <p>Good pre-worn condition. Soft, heavy leather with brass zips.
+            Please note: small scuff on the left cuff and some wear on the collar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Post 0002: boxed with thumbnails, tucked up beside post 0001 -->
+    <!-- (it sits under 0001 in this file because the page reads top to bottom) -->
+
+    <!-- Post 0001: plain -->
+    <section class="post" id="no-0001">
+      <p class="post-head">
+        <strong class="tag">Your Name</strong>: Artist Name 'Untitled' 28/11/2024 No. 0001
+        <a href="images/painting.svg">[View]</a><a href="mailto:you@example.com?subject=Inquiry%20about%20No.%200001">[Inquire]</a>
+      </p>
+      <div class="post-body">
+        <img src="images/painting.svg" width="180" height="240" alt="Placeholder painting">
+        <div class="post-meta">
+          <p class="file">File: <a href="images/painting.svg">[UNTITLED_painting.jpg]</a></p>
+          <p>Oil on canvas, 122cm x 91cm, 2024</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="post boxed tuck" id="no-0002">
+      <p class="post-head">
+        <strong class="tag">Your Name</strong>: RARE runway boots, patent leather 01/09/2024 No. 0002
+        <a href="images/thumb-1.svg">[View]</a><a href="mailto:you@example.com?subject=Inquiry%20about%20No.%200002">[Inquire]</a>
+      </p>
+      <div class="thumbs">
+        <a href="images/thumb-1.svg"><img src="images/thumb-1.svg" width="76" height="100" alt="Placeholder thumbnail 1"></a>
+        <a href="images/thumb-2.svg"><img src="images/thumb-2.svg" width="76" height="100" alt="Placeholder thumbnail 2"></a>
+        <a href="images/thumb-3.svg"><img src="images/thumb-3.svg" width="76" height="100" alt="Placeholder thumbnail 3"></a>
+      </div>
+    </section>
+
+  </div>
+  </main>
+
+  <p class="footer">&copy; Your Name. Questions? <a href="mailto:you@example.com">you@example.com</a></p>
+
+</div>
 </body>
 </html>
