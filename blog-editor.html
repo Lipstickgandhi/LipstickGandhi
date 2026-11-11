@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lipstick Gandhi Blog — Live Editor</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      color: #e8e8e8;
+      background: #171717;
+      font: 13px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .workspace {
+      height: 100%;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(380px, 0.85fr);
+    }
+    .preview-panel {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #444;
+    }
+    .toolbar {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 16px;
+      background: #202020;
+      border-bottom: 1px solid #444;
+    }
+    .toolbar strong { font-weight: 600; }
+    .toolbar span { color: #aaa; }
+    iframe {
+      width: 100%;
+      height: 100%;
+      flex: 1;
+      border: 0;
+      background: #fff;
+    }
+    .editors {
+      min-width: 0;
+      min-height: 0;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+    }
+    .editor {
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .editor + .editor { border-top: 1px solid #444; }
+    .editor-heading {
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 14px;
+      color: #cfcfcf;
+      background: #202020;
+      border-bottom: 1px solid #383838;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 11px;
+    }
+    .editor-heading a {
+      color: #ddd;
+      text-decoration: none;
+    }
+    .editor-heading a:hover { text-decoration: underline; }
+    textarea {
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      resize: none;
+      border: 0;
+      outline: none;
+      padding: 14px;
+      color: #e8e8e8;
+      background: #111;
+      font: 12px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      tab-size: 2;
+      white-space: pre;
+    }
+    .status { color: #a7dca7 !important; }
+    .error { color: #ff9a9a !important; }
+    @media (max-width: 760px) {
+      .workspace {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(45vh, 1fr) minmax(45vh, 1fr);
+      }
+      .preview-panel { border-right: 0; border-bottom: 1px solid #444; }
+      .editors { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr; }
+      .editor + .editor { border-top: 0; border-left: 1px solid #444; }
+    }
+  </style>
+</head>
+<body>
+  <main class="workspace">
+    <section class="preview-panel" aria-label="Live blog page preview">
+      <header class="toolbar">
+        <strong>Lipstick Gandhi / Blog</strong>
+        <span id="status" class="status" role="status">Loading page…</span>
+      </header>
+      <iframe id="preview" title="Live blog page preview"></iframe>
+    </section>
+    <section class="editors" aria-label="Editable page source">
+      <div class="editor">
+        <div class="editor-heading">
+          <label for="html-editor">HTML</label>
+          <a href="#" id="download-html">Download</a>
+        </div>
+        <textarea id="html-editor" spellcheck="false" aria-label="Editable HTML"></textarea>
+      </div>
+      <div class="editor">
+        <div class="editor-heading">
+          <label for="css-editor">CSS</label>
+          <a href="#" id="download-css">Download</a>
+        </div>
+        <textarea id="css-editor" spellcheck="false" aria-label="Editable CSS"></textarea>
+      </div>
+    </section>
+  </main>
+  <script>
+    const htmlEditor = document.querySelector("#html-editor");
+    const cssEditor = document.querySelector("#css-editor");
+    const preview = document.querySelector("#preview");
+    const status = document.querySelector("#status");
+
+    function render() {
+      const doc = new DOMParser().parseFromString(htmlEditor.value, "text/html");
+      doc.querySelectorAll('link[rel="stylesheet"]').forEach((link) => link.remove());
+      const base = doc.createElement("base");
+      base.href = new URL("./", location.href).href;
+      doc.head.prepend(base);
+      const style = doc.createElement("style");
+      style.textContent = cssEditor.value;
+      doc.head.append(style);
+      preview.srcdoc = `<!doctype html>\n${doc.documentElement.outerHTML}`;
+      status.textContent = "Live preview · edits apply as you type";
+      status.className = "status";
+    }
+
+    function download(filename, content, type) {
+      const url = URL.createObjectURL(new Blob([content], { type }));
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      link.click();
+      URL.revokeObjectURL(url);
+    }
+
+    document.querySelector("#download-html").addEventListener("click", (event) => {
+      event.preventDefault();
+      download("blog.html", htmlEditor.value, "text/html");
+    });
+    document.querySelector("#download-css").addEventListener("click", (event) => {
+      event.preventDefault();
+      download("blog.css", cssEditor.value, "text/css");
+    });
+
+    Promise.all([
+      fetch("./blog.html").then((response) => {
+        if (!response.ok) throw new Error(`Could not load blog.html (${response.status})`);
+        return response.text();
+      }),
+      fetch("./blog.css").then((response) => {
+        if (!response.ok) throw new Error(`Could not load blog.css (${response.status})`);
+        return response.text();
+      })
+    ]).then(([html, css]) => {
+      htmlEditor.value = html;
+      cssEditor.value = css;
+      render();
+      htmlEditor.addEventListener("input", render);
+      cssEditor.addEventListener("input", render);
+    }).catch((error) => {
+      status.textContent = error.message;
+      status.className = "error";
+    });
+  </script>
+</body>
+</html>
