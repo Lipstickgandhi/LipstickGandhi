@@ -78,6 +78,7 @@ body {
 }
 
 .main-content {
+  position: relative;
   flex: 1;
   min-width: 0;
   height: 100vh;
@@ -106,6 +107,21 @@ body {
   display: none;
 }
 
+.wordmark {
+  position: absolute;
+  right: 1rem;
+  bottom: clamp(1.5rem, 5vh, 3.5rem);
+  left: 1rem;
+  margin: 0;
+  color: #b84d47;
+  font-size: clamp(1.2rem, 3.1vw, 3rem);
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-align: center;
+  text-shadow: 0 1px 5px #000;
+  text-transform: uppercase;
+}
+
 @media (max-width: 700px) {
   .sidebar {
     width: 56px;
@@ -123,5 +139,10 @@ body {
 
   .header-image {
     object-position: 60% 100%;
+  }
+
+  .wordmark {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    letter-spacing: 0.1em;
   }
 }
