@@ -12,7 +12,7 @@
 }
 
 h1, h2 {
-  font-family: 'Babylonica', cursive;
+  font-family: inherit;
   font-weight: normal;
 }
 
@@ -23,7 +23,7 @@ html, body {
 }
 
 body {
-  font-family: 'Babylonica', cursive;
+  font-family: "Courier New", Courier, monospace;
   font-size: 1.25rem;
   line-height: 1.7;
   background: #1D1B1F;
@@ -71,26 +71,10 @@ body {
 }
 
 .coming-soon {
-  font-size: 3.5rem;
+  font-size: 1rem;
   letter-spacing: 0.04em;
   text-transform: none;
   color: #B7AFBA;
-}
-
-.rail-item a {
-  color: #B7AFBA;
-  text-decoration: none;
-}
-
-.rail-item.inquiries {
-  font-size: 30px;
-  letter-spacing: 0.04em;
-  text-transform: none;
-}
-
-.rail-item a:hover,
-.rail-item a:focus-visible {
-  color: #E1A3A1;
 }
 
 .main-content {
@@ -134,11 +118,7 @@ body {
   }
 
   .coming-soon {
-    font-size: 2.6rem;
-  }
-
-  .rail-item.inquiries {
-    font-size: 26px;
+    font-size: 0.875rem;
   }
 
   .header-image {
